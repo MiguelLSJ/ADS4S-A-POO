@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-package com.mj.api.models;
-=======
 package com.mj.api.model;
->>>>>>> 4915ed93e52f431d8955bce87cce65d2601a0438
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
