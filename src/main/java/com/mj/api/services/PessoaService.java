@@ -16,4 +16,8 @@ public class PessoaService {
     public List<PessoaModel> findALl() {
         return pessoaRepository.findAll();
     }
+
+    public PessoaModel criarPessoa(PessoaModel pessoaModel) {
+        return pessoaRepository.save(pessoaModel);
+    }
 }
