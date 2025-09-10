@@ -15,13 +15,11 @@ public class PessoaService {
     @Autowired
     private PessoaRepository pessoaRepository;
 
-    @GetMapping
     public List<PessoaModel> findALl() {
         return pessoaRepository.findAll();
     }
 
-    @PostMapping
-    public PessoaModel criarPessoa(PessoaModel pessoaModel) {
+    public PessoaModel criarPessoa (PessoaModel pessoaModel) {
         return pessoaRepository.save(pessoaModel);
     }
 }

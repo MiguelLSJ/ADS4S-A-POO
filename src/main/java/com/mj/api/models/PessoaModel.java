@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.*;
 
-@Entity (name = "TBL_PESSOA")
+@Entity
 @Table (name = "PESSOA")
 public class PessoaModel {
 	
