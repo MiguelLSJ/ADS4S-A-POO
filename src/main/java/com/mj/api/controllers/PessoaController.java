@@ -15,14 +15,24 @@ public class PessoaController {
     @Autowired
     private PessoaService pessoaService;
 
-    @GetMapping
+    @GetMapping (path = "/listar")
     public List<PessoaModel> findAll () {
         return pessoaService.findALl();
     }
 
-    @PostMapping
+    @PostMapping (path = "/new")
     public PessoaModel criarPessoa (@RequestBody PessoaModel pessoaModel) {
         System.out.println("[LOG] Received: " + pessoaModel.getNome());
         return pessoaService.criarPessoa(pessoaModel);
+    }
+
+    @DeleteMapping (path = "/delete/{id}")
+    public void removerPessoa (@PathVariable Long id) {
+        pessoaService.removerPessoa(id);
+    }
+
+    @PutMapping (path = "/update/{id}")
+    public PessoaModel atualizarPessoa (@PathVariable Long id,@RequestBody PessoaModel pessoaData) {
+        return pessoaService.atualizarPessoa(id, pessoaData);
     }
 }
